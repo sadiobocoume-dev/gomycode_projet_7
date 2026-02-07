@@ -1,0 +1,38 @@
+ALGORITHM lire_une_phrase
+VAR
+  car : CHAR ;
+  compteur_caractere :INTEGER;
+  compteur_mots: INTEGER;
+  compteur_voyelle:INTEGER
+BEGIN
+  // Initialisation des compteurs
+  compteur_caractere := 0
+  compteur_mots := 1
+  compteur_voyelles :=0
+
+  READ("Entrez une phrase se terminant par un point.")
+
+  READ(car)
+
+  WHILE (car != ".") DO
+    longueur += 1
+
+    // identification des voyelles en M et m
+    IF (car = "a" || "e" || "o" || "u" || "i" || "y"
+     || "A" || "E" || "O" || "U" || "I" || "Y") THEN
+      compteur_voyellesn +=1
+    END_IF
+
+   // determination du nombres de mots via la chaine de carcatire vite
+    IF (car = " ") THEN
+      compteur_mots += 1
+    END_IF
+
+   
+  END_WHILE
+  
+  WRITE(compteur_caractere)
+  WRITE(compteur_mots)
+  WRITE(compteur_voyelles)
+  
+END
